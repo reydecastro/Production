@@ -1,0 +1,767 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    C:\apps\FME2016\fme.exe C:\Projects\D6\FME\SendEmailNotification.fmw
+#          --SourceDataset_TEXTLINE "c:\FMEtemp\NewPPS.txt"
+#    
+#    
+#!   FME_DOCUMENT_PRIORGUID="3e668930-6055-4d15-946f-1d811d40c07d,0c431a92-f798-4c42-9ca4-2095cf688893,3efd17ae-9580-4a2f-9b73-dd269d63ba15,16ec4905-8e26-4f5b-ba4a-a951d00bc44c,34d709a4-f2f3-4187-879a-e8f2d3056702"
+#!   DESTINATION="NONE"
+#!   VIEW_POSITION="-25.0003 0"
+#!   WORKSPACE_VERSION="1"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   BEGIN_PYTHON=""
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TITLE=""
+#!   DOC_EXTENTS="2004.65 730.75"
+#!   REQUIREMENTS=""
+#!   ZOOM_SCALE="100"
+#!   SHOW_INFO_NODES="true"
+#!   FME_DOCUMENT_GUID="685f5854-6fa9-4046-a314-fc569f3eaeef"
+#!   PASSWORD=""
+#!   DESCRIPTION=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   DESTINATION_ROUTING_FILE=""
+#!   LOG_FILE=""
+#!   HISTORY=""
+#!   MAX_LOG_FEATURES="200"
+#!   IGNORE_READER_FAILURE="No"
+#!   CATEGORY=""
+#!   BEGIN_TCL=""
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   PYTHON_COMPATIBILITY="27"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   SHOW_ANNOTATIONS="true"
+#!   END_PYTHON=""
+#!   TERMINATE_REJECTED="NO"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   FME_BUILD_NUM="16716"
+#!   LAST_SAVE_BUILD="FME(R) 2016.1.3.1 (20161207 - Build 16716 - WIN32)"
+#!   END_TCL=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   USAGE=""
+#!   REQUIREMENTS_KEYWORD=""
+#!   LAST_SAVE_DATE="2017-04-19T16:36:29"
+#!   LEGAL_TERMS_CONDITIONS=""
+#!   DOC_TOP_LEFT="184.376 -798.248"
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   SOURCE="NONE"
+#!   FME_SERVER_SERVICES=""
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="TEXTLINE"
+#!   DATASET="$(SourceDataset_TEXTLINE)"
+#!   KEYWORD="TEXTLINE_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="false"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="false"
+#!   EXPOSABLE_ATTRS="fme_secondary_axis number(31,15) text_line_type char(64) text_line_number number(11,0) fme_dataset char(50) fme_text_size number(31,15) fme_color char(50) multi_reader_full_id number(11,0) fme_sweep_angle number(31,15) fme_basename char(50) multi_reader_keyword char(50) fme_text_string char(50) multi_reader_type char(50) multi_reader_id number(11,0) fme_feature_type char(50) fme_geometry fme_char(50) fme_type char(50) fme_primary_axis number(31,15) text_line_length number(6,0) fme_fill_color char(50) text_line_eol char(10) fme_rotation number(31,15) fme_start_angle number(31,15)"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   GENERATE_FME_BUILD_NUM="16494"
+#!   COORDSYS=""
+#!   START_FEATURE=""
+#!   FEATURE_TYPES=""
+#!   MIN_FEATURES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE=""
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the Text file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the Text file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="txt file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="text_line"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="buffer"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="buffer"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="buffer"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="buffer"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(20)"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(12)"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(8)"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(31,15)"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(15,7)"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="logical"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="TEXTLINE"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="text_line_none"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="TEXTLINE"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="text_line"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="4"
+#!   FEAT_GEOMTYPE="text_line_none"
+#!   POSITION="184.376 -258.126"
+#!   BOUNDING_RECT="184.376 -258.126 465.631 71"
+#!   ORDER="5e+14"
+#!   COLLAPSED="true"
+#!   KEYWORD="TEXTLINE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="text_line_data" ATTR_TYPE="buffer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <SERVICES>
+#! <SERVICE
+#!   NAME="fmejobsubmitter"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="ADVANCED"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="FAILURE_TOPICS"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="HTTP_DATASET"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="NOTIFICATION_WRITER"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="SUCCESS_TOPICS"
+#!   VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! </SERVICES>
+#! <REPOSITORY
+#!   NAME="D6"
+#! />
+#! <ITEM
+#!   NAME="SendEmailNotification.fmw"
+#! />
+#! <MODIFICATIONS>
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SERVER_DEST_DIR"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SHAREDRESOURCE_DATA"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":WBDoc:LOG_FILE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SHAREDRESOURCE_TEMP"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":WBDoc:DESTINATION_ROUTING_FILE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":WBDoc:SOURCE_ROUTING_FILE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_TOPIC_MESSAGE"
+#!   VALUE=""
+#! />
+#! </MODIFICATIONS>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_TEXTLINE Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*)|* Source Text File(s):"
+#!   DEFAULT_VALUE="c:\FMEtemp\NewPPS.txt"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="1"
+#!   TYPE="Emailer"
+#!   VERSION="0"
+#!   POSITION="2189.03 -798.248"
+#!   BOUNDING_RECT="2189.03 -798.248 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16716"
+#! >
+#!     <OUTPUT_FEAT NAME="Sent"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="BODYTYPE" PARM_VALUE="Plain Text"/>
+#!     <XFORM_PARM PARM_NAME="TO" PARM_VALUE="rey.decastro&lt;at&gt;illinois.gov&lt;comma&gt;&lt;space&gt;viraj.perera&lt;at&gt;illinois.gov&lt;comma&gt;&lt;space&gt;tom.cox&lt;at&gt;illinois.gov&lt;space&gt;&lt;space&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FROM" PARM_VALUE="rey.decastro&lt;at&gt;illinois.gov"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="BCC" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PORT" PARM_VALUE="25"/>
+#!     <XFORM_PARM PARM_NAME="ATTACHMENTTABLE" PARM_VALUE="c:&lt;backslash&gt;FMEtemp&lt;backslash&gt;NewPPS.txt  autodetect"/>
+#!     <XFORM_PARM PARM_NAME="AUTHENTICATION" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="CCGROUP" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="ADDRESSING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="USERNAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CC" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTACHGROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="smtpr.illinois.gov"/>
+#!     <XFORM_PARM PARM_NAME="CONTENT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SUBJECT" PARM_VALUE="New&lt;space&gt;PPS&lt;space&gt;Record&lt;space&gt;Test"/>
+#!     <XFORM_PARM PARM_NAME="BODY" PARM_VALUE="New&lt;space&gt;PPS"/>
+#!     <XFORM_PARM PARM_NAME="ENCRYPTION" PARM_VALUE="None"/>
+#!     <XFORM_PARM PARM_NAME="TIMEOUT" PARM_VALUE="5"/>
+#!     <XFORM_PARM PARM_NAME="STMP_CONNECTION" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Emailer"/>
+#!     <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="5"
+#!   TYPE="Tester"
+#!   VERSION="2"
+#!   POSITION="945.884 -67.4984"
+#!   BOUNDING_RECT="945.884 -67.4984 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16494"
+#! >
+#!     <OUTPUT_FEAT NAME="PASSED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="FAILED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST text_line_data NOT_ATTRIBUTE_IS_EMPTY &quot;&quot;"/>
+#!     <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
+#!     <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
+#!     <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
+#!     <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="8"
+#!   TYPE="Counter"
+#!   VERSION="2"
+#!   POSITION="1577.14 -100.001"
+#!   BOUNDING_RECT="1577.14 -100.001 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16494"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="START" PARM_VALUE="1"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SCOPE" PARM_VALUE="Global"/>
+#!     <XFORM_PARM PARM_NAME="CNT_ATTR" PARM_VALUE="_count"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Counter"/>
+#!     <XFORM_PARM PARM_NAME="DOMAIN" PARM_VALUE="counter"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="11"
+#!   TYPE="Tester"
+#!   VERSION="2"
+#!   POSITION="2149.28 -111.625"
+#!   BOUNDING_RECT="2149.28 -111.625 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16494"
+#! >
+#!     <OUTPUT_FEAT NAME="PASSED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="FAILED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST &lt;at&gt;Value&lt;openparen&gt;_count&lt;closeparen&gt; = 1&#10;TEST text_line_data NOT_ATTRIBUTE_IS_EMPTY &quot;&quot;"/>
+#!     <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
+#!     <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="AND"/>
+#!     <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
+#!     <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester_2"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="6"
+#!   SOURCE_NODE="4"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="9"
+#!   SOURCE_NODE="5"
+#!   TARGET_NODE="8"
+#!   SOURCE_PORT_DESC="fo 0 PASSED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="12"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="11"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="13"
+#!   SOURCE_NODE="11"
+#!   TARGET_NODE="1"
+#!   SOURCE_PORT_DESC="fo 0 PASSED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+FME_PYTHON_VERSION 27
+GUI IGNORE SourceDataset_TEXTLINE_1,TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1,TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1,TEXTLINE_IN_SKIP_LINES_TEXTLINE_1,TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1,TEXTLINE_IN_ENCODING_TEXTLINE_1,TEXTLINE_IN_EXPOSE_ATTRS_GROUP_TEXTLINE_1,TEXTLINE_IN_NETWORK_AUTHENTICATION_TEXTLINE_1
+DEFAULT_MACRO SourceDataset_TEXTLINE c:\FMEtemp\NewPPS.txt
+GUI MULTIFILE SourceDataset_TEXTLINE Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*)|* Source Text File(s):
+INCLUDE [ if {{$(SourceDataset_TEXTLINE)} == {}} { puts_real {Parameter 'SourceDataset_TEXTLINE' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE TEXTLINE
+READER_KEYWORD TEXTLINE_1
+READER_GEN_DIRECTIVES SKIP_LINES,0,SKIP_FOOTER,0,READ_BOTTOM_UP,No,_MERGE_SCHEMAS,YES,TEXTLINE_EXPOSE_FORMAT_ATTRS,,READ_WHOLE_FILE_AT_ONCE,NO,EXPOSE_ATTRS_GROUP,,ENCODING,
+
+WRITER_TYPE NULL
+WRITER_KEYWORD NULL_DEST
+NULL_DEST_DATASET null
+#! END_WB_HEADER
+
+#! START_WB_HEADER
+MACRO WB_KEYWORD "TEXTLINE_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER TEXTLINE TEXTLINE_1
+# =====================================================================
+# The following GUI line prompts for a file to be used as the source
+# TextLine file. The user input is stored in a macro, which is then
+# used to define the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_TEXTLINE_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER TEXTLINE TEXTLINE_1
+DEFAULT_MACRO SourceDataset_TEXTLINE_1 $(SourceDataset_TEXTLINE)
+GUI MULTIFILE SourceDataset_TEXTLINE_1 Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*)|* Source Text File(s):
+DEFAULT_MACRO TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1 NO
+TEXTLINE_1_READ_WHOLE_FILE_AT_ONCE "$(TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1)"
+GUI ACTIVECHOICE TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1 YES,TEXTLINE_IN_READ_BOTTOM_UP,TEXTLINE_IN_SKIP_LINES,TEXTLINE_IN_SKIP_FOOTER%NO Read Whole File at Once:
+DEFAULT_MACRO TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1 No
+TEXTLINE_1_READ_BOTTOM_UP "$(TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1)"
+GUI CHOICE TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1 Yes%No Read Bottom Up:
+DEFAULT_MACRO TEXTLINE_IN_SKIP_LINES_TEXTLINE_1 0
+TEXTLINE_1_SKIP_LINES "$(TEXTLINE_IN_SKIP_LINES_TEXTLINE_1)"
+GUI OPTIONAL INTEGER TEXTLINE_IN_SKIP_LINES_TEXTLINE_1 Number of Lines to Skip:
+DEFAULT_MACRO TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1 0
+TEXTLINE_1_SKIP_FOOTER "$(TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1)"
+GUI OPTIONAL INTEGER TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1 Number of Footer Lines to Skip:
+# =====================================================================
+# Allows to force the encoding of source text file
+DEFAULT_MACRO TEXTLINE_IN_ENCODING_TEXTLINE_1 
+TEXTLINE_1_ENCODING "$(TEXTLINE_IN_ENCODING_TEXTLINE_1)"
+GUI OPTIONAL STRING_OR_ENCODING TEXTLINE_IN_ENCODING_TEXTLINE_1 SYSTEM%* Character Encoding:
+# =====================================================================
+# Allow dynamic exposing of FORMAT ATTRIBUTES on the schema
+DEFAULT_MACRO TEXTLINE_IN_EXPOSE_ATTRS_GROUP_TEXTLINE_1 
+TEXTLINE_1_EXPOSE_ATTRS_GROUP "$(TEXTLINE_IN_EXPOSE_ATTRS_GROUP_TEXTLINE_1)"
+GUI DISCLOSUREGROUP TEXTLINE_IN_EXPOSE_ATTRS_GROUP_TEXTLINE_1 TEXTLINE_EXPOSE_FORMAT_ATTRS Schema Attributes
+# ===========================================================================
+DEFAULT_MACRO TEXTLINE_IN_NETWORK_AUTHENTICATION_TEXTLINE_1 
+TEXTLINE_1_NETWORK_AUTHENTICATION "$(TEXTLINE_IN_NETWORK_AUTHENTICATION_TEXTLINE_1)"
+GUI OPTIONAL AUTHENTICATOR TEXTLINE_IN_NETWORK_AUTHENTICATION_TEXTLINE_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ===========================================================================
+DEFAULT_MACRO TEXTLINE_IN_ATTRIBUTE_READING_TEXTLINE_1 ALL
+TEXTLINE_1_ATTRIBUTE_READING "$(TEXTLINE_IN_ATTRIBUTE_READING_TEXTLINE_1)"
+TEXTLINE_1_DATASET "$(SourceDataset_TEXTLINE_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)SendEmailNotification.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_TEXTLINE_1 TEXTLINE_1
+# -------------------------------------------------------------------------
+
+TEXTLINE_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME SendEmailNotification
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD TEXTLINE_1   INPUT FEATURE_TYPE *    ROUTE TEXTLINE TEXTLINE_1::text_line TO FME_GENERIC ::text_line ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+TEXTLINE_1_MERGE_DEF TEXTLINE_1::text_line EXACT text_line
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "text_line (TEXTLINE_1) Splitter"    INPUT FEATURE_TYPE text_line    OUTPUT FEATURE_TYPE text_line_TEXTLINE_1
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory    FACTORY_NAME Tester    INPUT  FEATURE_TYPE text_line_TEXTLINE_1    TEST text_line_data NOT_ATTRIBUTE_IS_EMPTY "" ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE Tester_PASSED
+# -------------------------------------------------------------------------
+
+# Create the DomainName that this transformer will use.
+# Because @Count itself will evalute the expression to calculate the
+# domain, we don't need to do anything in Tcl per feature going by
+
+INCLUDE [    set domainPrefix {};    if { {Global} == {Local} }    {       set domainPrefix [FME_EncodeText {Counter_}];    };    puts "MACRO Counter_FULL_DOMAIN ${domainPrefix}counter"; ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME Counter_Counter    INPUT  FEATURE_TYPE Tester_PASSED         @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)    OUTPUT FEATURE_TYPE ___TOREJECTOR___         "_count" @Count(REJECTABLE,fme_encoded,$(Counter_FULL_DOMAIN),"1")
+FACTORY_DEF * TestFactory    FACTORY_NAME Counter_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT PASSED FEATURE_TYPE Counter_<REJECTED>       @RemoveAttributes(___fme_rejection_code___)    OUTPUT FAILED FEATURE_TYPE Counter_OUTPUT       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Counter <REJECTED> Output Nuker"   INPUT FEATURE_TYPE Counter_<REJECTED>
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory    FACTORY_NAME Tester_2    INPUT  FEATURE_TYPE Counter_OUTPUT    TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_count<closeparen>,Tester_2) = 1 ENCODED TEST text_line_data NOT_ATTRIBUTE_IS_EMPTY "" ENCODED    BOOLEAN_OPERATOR AND    OUTPUT PASSED FEATURE_TYPE Tester_2_PASSED
+# -------------------------------------------------------------------------
+
+# Note -- the AttachmentTable has to have a SPACE as the first character so that we don't get the *bad*
+# FME Parser to start parsing a @ function call -- if @ is the first character, it will, and then we lose
+# our table elements :-(
+# The python later expects the first character to be a space so all is well.
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME Emailer_CATCHER    INPUT  FEATURE_TYPE Tester_2_PASSED    OUTPUT FEATURE_TYPE Emailer_READY       ___fme_emailer_host           "smtpr.illinois.gov"       ___fme_emailer_port           "25"       ___fme_emailer_encryption     "None"       ___fme_emailer_timeout        "5"       ___fme_emailer_authentication "NO"       ___fme_emailer_username       "<Unused>"       ___fme_emailer_password       "<Unused>"       ___fme_emailer_from           "@EvaluateExpression(FDIV,STRING_ENCODED,rey.decastro<at>illinois.gov,Emailer)"       ___fme_emailer_to             "@EvaluateExpression(FDIV,STRING_ENCODED,rey.decastro<at>illinois.gov<comma><space>viraj.perera<at>illinois.gov<comma><space>tom.cox<at>illinois.gov<space><space>,Emailer)"       ___fme_emailer_cc             ""       ___fme_emailer_bcc            ""       ___fme_emailer_subject        "New<space>PPS<space>Record<space>Test"       ___fme_emailer_body_type      "Plain Text"       ___fme_emailer_body           "New<space>PPS"       ___fme_emailer_attachments    " c:<backslash>FMEtemp<backslash>NewPPS.txt @EvaluateExpression(FDIV,STRING_ENCODED,,Emailer) autodetect"       ___fme_emailer_xformerName    "Emailer"
+FACTORY_DEF * PythonFactory    FACTORY_NAME Emailer_CALLER    INPUT FEATURE_TYPE Emailer_READY    PYTHON_NAMESPACE FMEOBJECTS    SYMBOL_NAME Emailer.Emailer    OUTPUT PYOUTPUT FEATURE_TYPE Emailer_PROCESSED
+FACTORY_DEF * TestFactory    FACTORY_NAME Emailer_ROUTER    INPUT FEATURE_TYPE Emailer_PROCESSED    TEST &fme_rejection_code == ""
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
